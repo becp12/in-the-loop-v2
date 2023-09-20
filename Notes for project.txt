@@ -1,0 +1,41 @@
+Made GitHub Repo
+Made react app
+	npx create-react-app [repo name]
+Install express and logger
+	npm install -S express morgan
+Made server.js
+	touch server.js
+Update server.js file so that express could use React
+
+Run build
+	npm run build
+
+Comitted and connected project to GitHub Repo
+
+Made web app
+Follow step by step
+Deployment centre to setup GitHub Actions (CI/CD System)
+- Picked GitHub as our source provider
+- GitHb Actions as our build system
+- Created yml file
+
+GitHub did a build
+
+Telling Azure how to run file
+	Configuration
+		General Settings
+			Startup command - node server.js
+				Save
+
+
+
+
+Google OAuth
+Database stuff
+
+
+Add database
+Connect to database (Mongo)
+
+1. JWT working between client and sever
+2. Google OAuth or Microsoft
