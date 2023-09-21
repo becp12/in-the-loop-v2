@@ -51,7 +51,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Express Server listening on port ${PORT}`));
 
 // Connect to the database
-// require('./config/database');
+require('./config/database');
 
 app.use(logger('dev'));
 // Process data in body of request if 
