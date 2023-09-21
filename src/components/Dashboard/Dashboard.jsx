@@ -35,11 +35,11 @@ export default function Dashboard({ AuthContext }) {
       <>
         <h3>Dashboard</h3>
         <button className="btn" onClick={handleLogout} >Logout</button>
-        <h4>{user?.name}</h4>
+        <h4>{user?.firstName}</h4>
         <br />
         <p>{user?.email}</p>
         <br />
-        <img src={user?.picture} alt={user?.name} />
+        <img src={user?.avatar} alt={user?.name} />
         <br />
         <div>
           {posts.map((post, idx) => <div>

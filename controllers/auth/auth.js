@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const queryString = require('query-string');
 const axios = require('axios');
+const User = require('../../models/user')
 
 module.exports = {
     authorizeURL,
@@ -54,13 +55,25 @@ async function getToken(req, res) {
       // Exchange authorization code for access token (id token is returned here too)
       const { data: { id_token} } = await axios.post(`${config.tokenUrl}?${tokenParam}`);
       if (!id_token) return res.status(400).json({ message: 'Auth error' });
+      console.log(id_token);
       // Get user info from id token
-      const { email, name, picture } = jwt.decode(id_token);
-      const user = { name, email, picture };
+      const { email, name, picture, given_name, family_name, sub } = jwt.decode(id_token);
+      let user = await User.findOne({ googleId: sub });
+      if (!user) {
+        user = await User.create({
+            firstName: given_name,
+            lastName: family_name,
+            name: name,
+            googleId: sub,
+            email: email,
+            avatar: picture
+        })
+      };
       // Sign a new token
       const token = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });
       // Set cookies for user
       res.cookie('token', token, { maxAge: config.tokenExpiration, httpOnly: true,  })
+
       // You can choose to store user in a DB instead
       res.json({
         user,
