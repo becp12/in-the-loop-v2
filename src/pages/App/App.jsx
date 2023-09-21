@@ -51,14 +51,14 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <div className="App">
+    <main className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <AuthContextProvider>
           <RouterProvider router={router} />
         </AuthContextProvider>
       </header>
-    </div>
+    </main>
   );
 }
 
