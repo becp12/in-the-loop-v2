@@ -13,6 +13,7 @@ export default function About() {
         <p>In the loop is the perfect companion for your crochet and knit projects. You can track your projects, what you have in your yarn stash (coming soon), keep track of all your patterns in our Pattern Library (coming soon) and even explore new stiches in our Swatch Library (coming soon).</p>
         
         <h3>Project Tracking</h3>
+
         <div id="ProjectTrackingCarousel" class="carousel slide carousel-dark container-sm">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#ProjectTrackingCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -41,6 +42,7 @@ export default function About() {
         </div>
 
         <h3>Yarn Stash</h3>
+
         <div id="YarnStashCarousel" class="carousel slide carousel-dark container-sm">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#YarnStashCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -69,6 +71,7 @@ export default function About() {
         </div>
 
         <h3>Pattern Library</h3>
+
         <div id="PatternLibraryCarousel" class="carousel slide carousel-dark container-sm">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#PatternLibraryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -97,6 +100,7 @@ export default function About() {
         </div>
 
         <h3>Swatch Library</h3>
+        
         <div id="SwatchLibraryCarousel" class="carousel slide carousel-dark container-sm">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#SwatchLibraryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

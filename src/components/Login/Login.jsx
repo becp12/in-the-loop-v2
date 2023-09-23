@@ -13,8 +13,11 @@ export default function Login() {
         console.error(err);
       }
     }
-    return <>
-    <h3>Login to Dashboard</h3>
-    <button className="btn" onClick={handleLogin} >Login</button>
-    </>
+
+    return (
+      <>
+        <h3>Login to Dashboard</h3>
+        <button className="btn" onClick={handleLogin} >Login</button>
+      </>
+    )
   }
