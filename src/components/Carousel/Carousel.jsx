@@ -6,7 +6,7 @@ export default function Carousel({ screenshots, name }) {
         <>
             <div id={name} className="carousel slide carousel-dark container-sm">
                 <CarouselIndicatorContainer screenshots={screenshots} name={name} />
-                <CarouselInner screenshots={screenshots}/>
+                <CarouselInner screenshots={screenshots} name={name} />
                 <button className="carousel-control-prev" type="button" data-bs-target={`#${name}`} data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
