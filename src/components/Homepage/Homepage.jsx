@@ -4,7 +4,8 @@ import { useContext } from 'react';
 const serverUrl = process.env.REACT_APP_SERVER_URL;
 
 export default function Homepage({ AuthContext }) {
-  const { user, loggedIn, checkLoginState } = useContext(AuthContext);
+  // loggedIn can be added to the const at a later date
+  const { user, checkLoginState } = useContext(AuthContext);
 
   const handleLogout = async () => {
     try {
