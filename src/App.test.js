@@ -14,6 +14,6 @@ test('renders login to dashboard element by default', async () => {
   });
   
   
-  const linkElement = screen.getByText('Login to Dashboard');
+  const linkElement = screen.getAllByText('Please login to access all the features of the app')[0];
   expect(linkElement).toBeInTheDocument();
 });
