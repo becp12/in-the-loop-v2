@@ -7,6 +7,8 @@ import Callback from '../../components/Callback/Callback';
 import Home from '../Home/Home';
 import NavBar from '../../components/NavBar/NavBar'
 import Projects from '../Projects/Projects';
+import ProjectDetail from '../ProjectDetail/ProjectDetail';
+import NewProjectForm from '../NewProject/newProjectForm'
 
 // Ensures cookie is sent
 axios.defaults.withCredentials = true;
@@ -28,8 +30,10 @@ const router = createBrowserRouter([
     path: "/projects/*",
     children: [
       { index: true, element: <Projects /> }, 
+      { path: ':projectId', element: <ProjectDetail />},
+      { path: 'new', element: <NewProjectForm />}
     ],
-  }
+  },
 ]);
 
 const AuthContextProvider = ({ children }) => {

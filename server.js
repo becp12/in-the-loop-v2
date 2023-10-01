@@ -64,7 +64,7 @@ app.use(express.json());
 // app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-// app.use(require('./config/checkToken'));
+app.use(require('./config/checkToken'));
 
 
 
@@ -73,6 +73,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Put API routes here, before the "catch all" route
 // Protect the api routes below from anon users
 app.use('/auth', require('./routes/auth'));
+app.use('/projects', require('./routes/projects'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
