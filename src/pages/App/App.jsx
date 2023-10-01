@@ -6,7 +6,6 @@ import { useEffect, useState, createContext, useCallback } from 'react';
 import Callback from '../../components/Callback/Callback';
 import Home from '../Home/Home';
 import NavBar from '../../components/NavBar/NavBar'
-import Header from '../../components/Header/Header'
 import Projects from '../Projects/Projects';
 
 // Ensures cookie is sent

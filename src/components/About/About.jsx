@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import './About.css';
 import Login from '../../components/Login/Login';
 import Carousel from "../Carousel/Carousel";
