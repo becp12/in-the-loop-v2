@@ -61,7 +61,6 @@ const AuthContextProvider = ({ children }) => {
 export default function App() {
   return (
     <main className="App">
-      <Header />
       <NavBar />
       <AuthContextProvider>
         <RouterProvider router={router} />

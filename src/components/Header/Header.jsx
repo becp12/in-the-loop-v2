@@ -4,7 +4,7 @@ export default function Header() {
 
     return (
         <header className='bg-primary'>
-            <h1> Hello to Header </h1>
+            <h1> In The Loop </h1>
         </header>
     );
   }

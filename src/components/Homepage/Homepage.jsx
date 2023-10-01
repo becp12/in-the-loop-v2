@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useContext } from 'react';
+import "./Homepage.css"
 
 const serverUrl = process.env.REACT_APP_SERVER_URL;
 
@@ -17,16 +18,22 @@ export default function Homepage({ AuthContext }) {
     }
   }
 
-    return (
-      <main className="App">
-        <h1> Hello to Homepage </h1>
-        <button className="btn" onClick={handleLogout} >Logout</button>
-        <h4>{user?.firstName}</h4>
-        <br />
-        <p>{user?.email}</p>
-        <br />
-        <img src={user?.avatar} alt={user?.name} />
-        <br />
-      </main>
-    );
-  }
+  return (
+    <main>
+      <div id="welcome">
+        <div id="welcome-words">
+          <h3>Welcome, </h3>
+          <h3>{user?.firstName}!</h3>
+        </div>
+        <img src={user?.avatar} alt={user?.name} id="user-img" />
+        <button type="button" className="btn btn-info logging" onClick={handleLogout} >Logout</button>
+      </div>
+
+
+
+      <br /><br /><br /><br /><br /><br />
+      <p>{user?.email}</p>
+
+    </main>
+  );
+}
