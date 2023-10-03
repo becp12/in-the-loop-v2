@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const ProjectSchema = new Schema({
     title: {type: String, required: true},
+    image: [{type: String, match: /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$/}],
     craft: {type: String, enum:["Crochet", "Knit", "Other"], required: true},
     // only show if other is selected
     other: String,

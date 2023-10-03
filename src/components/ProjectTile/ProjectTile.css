@@ -1,0 +1,16 @@
+#project-tile {
+    margin: 1rem;
+    display: flex;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#project-tile > .project-img-container {
+    object-fit: none;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

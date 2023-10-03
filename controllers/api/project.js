@@ -7,11 +7,19 @@ module.exports = {
     show,
 }
 
-function index(req, res) {
-    Project.find({ user: req.user._id})
-            .exec(function(err, projects) {
-                res.render('/', { title: 'Projects', projects })
-    });
+async function index(req, res) {
+    try {
+        const projects = await Project.find({ user: req.user._id }).populate('user').exec();
+        if (!projects) {
+            res.json({});
+            return;
+        }
+        res.json(projects);
+    } catch (err) {
+        console.log(err);
+        res.status(400).json(err);
+    }
+
 }
 
 function newProject(req, res) {

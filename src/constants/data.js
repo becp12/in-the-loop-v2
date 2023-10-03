@@ -1,9 +1,9 @@
 export const projectScreenshots = [
     {
-        placeholderImage: "/images/placeholder1.png", isActive: true
+        placeholderImage: "/images/ProjectTracking.png", isActive: true
     }, 
     {
-        placeholderImage: "/images/placeholder2.jpg", isActive: false
+        placeholderImage: "/images/CreateNewProject.png", isActive: false
     },
     {
         placeholderImage: "/images/placeholder3.png", isActive: false

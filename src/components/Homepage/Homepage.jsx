@@ -27,13 +27,8 @@ export default function Homepage({ AuthContext }) {
         </div>
         <img src={user?.avatar} alt={user?.name} id="user-img" />
         <button type="button" className="btn btn-info logging" onClick={handleLogout} >Logout</button>
+        <a href="/projects"><button className="btn btn-info logging">See Projects</button></a>
       </div>
-
-
-
-      <br /><br /><br /><br /><br /><br />
-      <p>{user?.email}</p>
-
     </main>
-  );
+  )
 }

@@ -33,7 +33,7 @@ export default function NewProjectForm() {
         // Prevent form from being submittedto the server
         evt.preventDefault();
         try {
-            const { data : newProject } = await axios.post(`${serverUrl}/projects`, formData);
+            const { data: newProject } = await axios.post(`${serverUrl}/projects`, formData);
             // newProject.startDate = newProject.startDate.split("T")[0];
             // setProject([...project, newProject]);
             setFormData({
@@ -57,6 +57,7 @@ export default function NewProjectForm() {
 
     return (
         <div className="project-form-container container-sm">
+            <h1><center>Create New Project</center></h1>
             <form onSubmit={handleSubmit}>
 
                 <div>
@@ -73,50 +74,81 @@ export default function NewProjectForm() {
                 </div>
 
                 <div>
+                    <label class="form-label">Images</label>
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="image"
+                        placeholder="Must be a link to the image, accepts .jpeg, .jpg, .png, .gif, or .svg"
+                        onChange={handleChange}
+                        value={formData.image}
+                    />
+                </div>
+
+                <div>
                     <label class="form-label">Pick your craft
                         <select name="craft" value={formData.craft} onChange={handleChange} class="form-select">
-                            <option value="crochet">Crochet</option>
-                            <option value="knit">Knit</option>
-                            <option value="other">Other</option>
+                            <option value="Crochet">Crochet</option>
+                            <option value="Knit">Knit</option>
+                            <option value="Other">Other</option>
                         </select>
                     </label>
                 </div>
 
-                <div>
-                    <label class="form-label">Craft Name</label>
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="other"
-                        placeholder="Craft Name"
-                        onChange={handleChange}
-                        value={formData.other}
-                    />
-                </div>
+                {/* if the craft chosen is crochet, needle size and craft name will disappear and only show hook size */}
+                {formData.craft === "Crochet"
+                    ?
+                    <div>
+                        <label class="form-label">Hook Size</label>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="hook"
+                            placeholder="Hook Size"
+                            onChange={handleChange}
+                            value={formData.hook}
+                        />
+                    </div>
+                    :
+                    <>
+                    </>
+                }
 
-                <div>
-                    <label class="form-label">Hook Size</label>
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="hook"
-                        placeholder="Hook Size"
-                        onChange={handleChange}
-                        value={formData.hook}
-                    />
-                </div>
+                {/* if the craft chosen is other, needle size and hook size will disappear and only show craft name */}
+                {formData.craft === "Other"
+                    ?
+                    <div>
+                        <label class="form-label">Craft Name</label>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="other"
+                            placeholder="Craft Name"
+                            onChange={handleChange}
+                            value={formData.other}
+                        />
+                    </div>
+                    :
+                    <>
+                    </>
+                }
 
-                <div>
-                    <label class="form-label">Needle Size</label>
-                    <input
-                        class="form-control"
-                        type="text"
-                        name="needle"
-                        placeholder="Needle Size"
-                        onChange={handleChange}
-                        value={formData.needle}
-                    />
-                </div>
+                {/* if the craft chosen is knit, hook size and craft name will disappear and only show needle size */}
+                {formData.craft === "Knit" ?
+                    <div>
+                        <label class="form-label">Needle Size</label>
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="needle"
+                            placeholder="Needle Size"
+                            onChange={handleChange}
+                            value={formData.needle}
+                        />
+                    </div>
+                    :
+                    <></>
+                }
 
                 <div>
                     <label class="form-label">Required Tools</label>
@@ -144,7 +176,7 @@ export default function NewProjectForm() {
                 <div>
                     <label class="form-label">Start Date</label>
                     <input
-                    class="form-control"
+                        class="form-control"
                         type="Date"
                         name="startDate"
                         value={formData.startDate}
@@ -163,7 +195,7 @@ export default function NewProjectForm() {
                     />
                 </div>
 
-                <button type="submit">Add Project</button>
+                <button class="btn bg-info" type="submit">Add Project</button>
             </form >
         </div >
 

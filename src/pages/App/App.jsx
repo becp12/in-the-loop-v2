@@ -29,7 +29,7 @@ const router = createBrowserRouter([
   {
     path: "/projects/*",
     children: [
-      { index: true, element: <Projects /> }, 
+      { index: true, element: <Projects AuthContext={AuthContext}/> }, 
       { path: ':projectId', element: <ProjectDetail />},
       { path: 'new', element: <NewProjectForm />}
     ],
@@ -72,3 +72,8 @@ export default function App() {
   );
 }
 
+
+
+// make footer and include
+// <a href="https://www.freepik.com/free-vector/knitted-woolen-clothes-set-illustrations-apparel-wool-balls-yarn-basket_20827796.htm#query=yarn%20ball%20clip%20art&position=14&from_view=search&track=ais">Image by pch.vector</a> on Freepik
+// <a href="https://www.freepik.com/free-vector/yarn-wool-clew-illustration-knitting-textile-yellow-green-thread-weaving_2890877.htm#query=yarnball%20clipart&position=0&from_view=search&track=ais">Image by vectorpouch</a> on Freepik
