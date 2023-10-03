@@ -72,8 +72,8 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 // Protect the api routes below from anon users
-app.use('/auth', require('./routes/auth'));
-app.use('/projects', require('./routes/projects'));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/projects', require('./routes/projects'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
