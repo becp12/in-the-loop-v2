@@ -197,6 +197,7 @@ export default function NewProjectForm() {
 
                 <button class="btn bg-info" type="submit">Add Project</button>
             </form >
+            <p className="error-message">{error}</p>
         </div >
 
 
