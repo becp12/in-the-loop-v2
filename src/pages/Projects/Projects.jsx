@@ -1,5 +1,5 @@
 import { useContext, useState, useCallback, useEffect } from 'react';
-import { useNavigate, useParams, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import ProjectTile from "../../components/ProjectTile/ProjectTile"
 import "./Projects.css"
@@ -10,7 +10,6 @@ export default function Projects({ AuthContext }) {
   const navigate = useNavigate();
   const context = useContext(AuthContext);
   const [projects, setProjects] = useState(null);
-  let params = useParams();
 
   const getProjects = useCallback(async () => {
 
@@ -53,7 +52,7 @@ export default function Projects({ AuthContext }) {
         </>
         :
         <>
-          <img src="images/yarn-ball-load.gif" />
+          <img src="images/yarn-ball-load.gif" alt="loading" />
         </>
       }
     </>

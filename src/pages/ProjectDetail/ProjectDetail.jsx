@@ -13,7 +13,7 @@ export default function ProjectDetail() {
         const { data: project } = await axios.get(`${serverUrl}/projects/${params.projectId}`);
         
         setProject(project);
-    },[]);
+    },[params.projectId]);
 
     useEffect( () => {
         getProject();
@@ -30,7 +30,7 @@ export default function ProjectDetail() {
             </>
             :
             <>
-                <img src="images/yarn-ball-load.gif" />
+                <img src="images/yarn-ball-load.gif" alt="loading"/>
             </>
             }
         </>
