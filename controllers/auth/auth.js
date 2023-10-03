@@ -18,7 +18,7 @@ const config = {
     redirectUrl: process.env.REDIRECT_URL,
     clientUrl: process.env.CLIENT_URL,
     tokenSecret: process.env.TOKEN_SECRET,
-    tokenExpiration: 36000,
+    tokenExpiration: 3600000,
     postUrl: 'https://jsonplaceholder.typicode.com/posts' //might not need this line
   };
   
@@ -88,6 +88,7 @@ async function loggedInState(req, res) {
     try {
     // Get token from cookie
     const token = req.cookies.token;
+    console.log(`Token: ${token}`)
     if (!token) return res.json({ loggedIn: false });
     const { user } = jwt.verify(token, config.tokenSecret);
     const newToken = jwt.sign({ user }, config.tokenSecret, { expiresIn: config.tokenExpiration });

@@ -1,0 +1,14 @@
+.project-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-button {
+    padding: .5rem;
+}
+
+a.add-box {
+    text-decoration: none;
+}

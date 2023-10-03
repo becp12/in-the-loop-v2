@@ -1,0 +1,7 @@
+label {
+    font-weight: bold;
+}
+
+button[type=submit] {
+    margin: 1rem 0;
+}
