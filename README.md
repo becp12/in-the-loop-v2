@@ -2,6 +2,8 @@
 
 ![Build Badge](https://github.com/becp12/in-the-loop-v2/actions/workflows/main_in-the-loop-v2.yml/badge.svg)
 
+[Click to open In The Loop!](https://in-the-loop-v2.azurewebsites.net/)
+
 In The Loop is a web app for people who enjoy crochet, knitting or other yarn crafts and want a way to track various parts of their crafting journey, whether it be tracking their WIPS (Work in Progress), track the yarn they have in their collection, learn new stiches, or keep a digital library of their patterns, this is the app for them.
 
 The first feature to implement was a Project Tracker. This was the most important feature to include in this app as when you have multiple projects on the go, it's hard to remember what pattern, yarn, hook, needle etc that you're using for each project. This feature takes out the guesswork as it records all of these things.
@@ -56,8 +58,6 @@ New Projects
 
 ![NewProjects](https://i.imgur.com/YWoSa2G.png)
 
-## Getting Started
-[Click to open In The Loop!](https://in-the-loop-v2.azurewebsites.net/)
 
 ## Available Scripts
 `npm start`
