@@ -4,7 +4,7 @@ export default function OtherProject({ project }) {
         <div className="project-detail-container container-sm">
             <h1>{project.title}</h1>
             <div className="detail-container">
-                <img src={!project.image[0] ? `/images/knitted-clothes.jpg` : `${project.image[0]}`} className="img-fluid" />
+                <img src={!project.image[0] ? `/images/knitted-clothes.jpg` : `${project.image[0]}`} className="img-fluid" alt="project"/>
                 <div className="project-details">
                     <h2>Craft: {project.other}</h2>
                     <h3>Required tools: {project.tools}</h3>
