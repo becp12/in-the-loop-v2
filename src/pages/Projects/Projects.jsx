@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import ProjectTile from "../../components/ProjectTile/ProjectTile"
 import "./Projects.css"
+import "../ProjectDetail/ProjectDetail.css"
 
 const serverUrl = process.env.REACT_APP_SERVER_URL;
 
@@ -36,7 +37,7 @@ export default function Projects({ AuthContext }) {
         <>
           <div className="container-sm project-container">
             <Link to="/projects/new" className="add-box">
-              <div className="card" id="project-tile">
+              <div className="card mb-3 border-dark" id="project-tile">
                 <div className="project-img-container add-button">
                   <img src="/images/plus-symbol.png" className="card-img-top" alt="craft project" />
                 </div>
@@ -52,7 +53,7 @@ export default function Projects({ AuthContext }) {
         </>
         :
         <>
-          <img src="images/yarn-ball-load.gif" alt="loading" />
+          {/* <img src="images/yarn-ball-load.gif" alt="loading" className="img-fluid loading-img" /> */}
         </>
       }
     </>

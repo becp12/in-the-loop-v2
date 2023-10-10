@@ -23,7 +23,7 @@ export default function ProjectTile({ project }) {
                         {project.craft === "Other" ? <p>Tools: {project.tools}</p> : <></>}
                     </p>
                     {/* <p>Creator: {project.user.firstName}</p> */}
-                    <a href={`/projects/${project._id}`} className="btn btn-primary">Details</a>
+                    <a href={`/projects/${project._id}`}><button className="btn btn-primary">Details</button></a>
                 </div>
             </div>
         </>
