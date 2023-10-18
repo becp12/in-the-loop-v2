@@ -10,6 +10,9 @@ import Projects from '../Projects/Projects';
 import ProjectDetail from '../ProjectDetail/ProjectDetail';
 import NewProjectForm from '../NewProject/newProjectForm'
 
+import 'bootstrap/dist/css/bootstrap.css'
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle'
+
 // Ensures cookie is sent
 axios.defaults.withCredentials = true;
 
@@ -52,6 +55,10 @@ const AuthContextProvider = ({ children }) => {
   
     useEffect(() => {
       checkLoginState();
+
+      const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+      const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
     }, [checkLoginState]);
   
     return (
