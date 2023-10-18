@@ -74,6 +74,7 @@ app.use(require('./config/checkToken'));
 // Protect the api routes below from anon users
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/projects', require('./routes/projects'));
+app.use('/api/yarn', require('./routes/yarn'));
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
